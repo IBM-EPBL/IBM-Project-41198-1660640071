@@ -1,0 +1,266 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np"
+      ],
+      "metadata": {
+        "id": "e_LEejcyPBeR"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd"
+      ],
+      "metadata": {
+        "id": "dM7aAf6XPfXR"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Index(['Sex', 'Length', 'Diameter', 'Height', 'Whole weight', 'Shucked weight',\n",
+        "       'Viscera weight', 'Shell weight', 'age'],\n",
+        "      dtype='object')"
+      ],
+      "metadata": {
+        "id": "hC61WmmjQvVx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Index(['Length', 'Diameter', 'Height', 'Whole weight', 'Shucked weight',\n",
+        "       'Viscera weight', 'Shell weight', 'age'],\n",
+        "      dtype='object')"
+      ],
+      "metadata": {
+        "id": "zNkIS1LOQypi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "UH6wGNjcXHNX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fig = plt.figure(figsize=(10, 6))\n",
+        "plt.scatter(range(y_test.shape[0]), y_test, color=\"peru\", label=\"y_true\")\n",
+        "plt.scatter(range(y_test.shape[0]), test_preds, color=\"drkmagenta\", label=\"test_preds\")\n",
+        "plt.legend();"
+      ],
+      "metadata": {
+        "id": "lgip31EXXJW0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data['age'] = data['Rings']+1.5\n",
+        " data.drop('Rings', axis = 1, inplace = True)"
+      ],
+      "metadata": {
+        "id": "WnVYKYkPRe13"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Index(['Length', 'Diameter', 'Height', 'Whole weight', 'Shucked weight',\n",
+        "       'Viscera weight', 'Shefig = plt.figure(figsize=(10, 6))\n",
+        "plt.scatter(range(y_test.shape[0]), y_test, color=\"peru\", label=\"y_true\")\n",
+        "plt.scatter(range(y_test.shape[0]), test_preds, color=\"darkmagenta\", label=\"test_preds\")\n",
+        "plt.legend();will weight', 'age'],\n",
+        "      dtype='object')"
+      ],
+      "metadata": {
+        "id": "Sc3hkeBCSDSy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 'Whole weight'\n",
+        "plt.scatter(x = data[var], y = data['age'],)\n",
+        "plt.grid(True)"
+      ],
+      "metadata": {
+        "id": "2Yz1t4F8SpVy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data.drop(data[(data['Shucked weight']>= 1) & (data['age'] < 20)].index, inplace=True)\n",
+        "data.drop(data[(data['Shucked weight']<1) & (data['age'] > 20)].index, inplace=True)"
+      ],
+      "metadata": {
+        "id": "sU-20R0tStiG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data.groupby('Sex')[['Length', 'Diameter', 'Height', 'Whole weight', 'Shucked weight',\n",
+        "       'Viscera weight', 'Shell weight', 'age']].mean().sort_values('age')"
+      ],
+      "metadata": {
+        "id": "OVunZkVtU04X"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sns.countplot(x = 'Sex', data = data, palette=\"Set3\")"
+      ],
+      "metadata": {
+        "id": "6xzQwG7ZU6_L"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "plt.figure(figsize = (20,7))\n",
+        "sns.swarmplot(x = 'Sex', y = 'age', data = data, hue = 'Sex')\n",
+        "sns.violinplot(x = 'Sex', y = 'age', data = data)"
+      ],
+      "metadata": {
+        "id": "NdiSKtHYVFFq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data.groupby('Sex')[['Length', 'Diameter', 'Height', 'Whole weight', 'Shucked weight',\n",
+        "       'Viscera weight', 'Shell weight', 'age']].mean().sort_values('age')"
+      ],
+      "metadata": {
+        "id": "rQIDF5atVKiJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "plt.figure(figsize=(20,7))\n",
+        "sns.heatmap(data[numerical_features].corr(), annot=True)"
+      ],
+      "metadata": {
+        "id": "6z68jMtBVT0R"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 'Viscera weight'\n",
+        "plt.scatter(x = data[var], y = data['age'],)\n",
+        "plt.grid(True)"
+      ],
+      "metadata": {
+        "id": "AsMlYbpMVe6O"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lr = LogisticRegression()\n",
+        "lr.fit(X_train, y_train)\n",
+        "y_pred = lr.predict(X_test)\n",
+        "\n",
+        "print('Classification Report: \\n', classification_report(y_test, y_pred))\n",
+        "print('Confusion Matrix: \\n', confusion_matrix(y_test, y_pred))\n",
+        "lr_train_acc = lr.score(X_train, y_train)\n",
+        "print('Training Score: ', lr_train_acc)\n",
+        "lr_test_acc = lr.score(X_test, y_test)\n",
+        "print('Testing Score: ', lr_test_acc)"
+      ],
+      "metadata": {
+        "id": "WqFDvpChWG3E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "test_preds = rf.predict(X_test) \n",
+        "\n",
+        "# Visualize predictions vs true labels\n",
+        "fig = plt.figure(figsize=(10, 6))\n",
+        "plt.scatter(range(y_test.shape[0]), y_test, color=\"salmon\", label=\"y_test\")\n",
+        "plt.scatter(range(y_test.shape[0]), test_preds, color=\"skyblue\", label=\"test_preds\")\n",
+        "plt.legend();"
+      ],
+      "metadata": {
+        "id": "pH8hztfpWovw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 'Shucked weight'\n",
+        "plt.scatter(x = data[var], y = data['age'],)\n",
+        "plt.grid(True)"
+      ],
+      "metadata": {
+        "id": "kDTkgbPaVo1M"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
